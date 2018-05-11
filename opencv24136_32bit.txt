@@ -1,0 +1,60 @@
+How to install opencv2.4.13.6 in Visual Studio 2017
+
+Step 0: Here, I had downloaded and installed Visual Studio 2017 community version.
+        You can download it from "https://www.visualstudio.com/"
+        
+		Here, I had downloaded and installed Opencv 2.4.13.6.
+        You can download opencv from "https://opencv.org/releases.html"
+		
+		Then install opencv and rename it to opencv24136 then press extract
+		Then open opencv folder and go to build and select x86 folder and enter into vc14\bin path add to
+		System path as
+		
+		Add opencv to system path "C:\opencv24136\build\x86\vc14\bin"
+		
+		I had added this in system path so I cancel it 
+		In your case you can press ok ok button
+		
+		Now
+		open visual studio 2017
+		
+Step 1: Create new empty project 
+Step 2: Go Solution Explorer and right click on Source flies
+        Select "Add" -> New Items Select C++ File-> rename to main.cpp
+        Click to "add"
+Step 3: Go to project and select Project Properties
+Step 4: In Configuration Select Debug mode and in Platform Select Win32
+Step 5: Select VC++ Directories Select Include Directories and select "Edit"
+        C:\opencv24136\build\include
+Step 6: Select Library Directories and select "Edit"
+        C:\opencv24136\build\x86\vc14\lib
+Step 7: In Linker -> Input select Additonal Dependencies select "Edit" and add
+C:\opencv24136\build\x86\vc14\lib
+
+Here, you can add it from \build\x86\vc14\lib with only d.lib files
+Such as opencv_calib3d2413d.lib so you can copy all .lib file and paste it below and copy it
+and paste to 
+opencv_calib3d2413d.lib
+opencv_contrib2413d.lib
+opencv_core2413d.lib
+opencv_features2d2413d.lib
+opencv_flann2413d.lib
+opencv_gpu2413d.lib
+opencv_highgui2413d.lib
+opencv_imgproc2413d.lib
+opencv_legacy2413d.lib
+opencv_ml2413d.lib
+opencv_nonfree2413d.lib
+opencv_objdetect2413d.lib
+opencv_ocl2413d.lib
+opencv_photo2413d.lib
+opencv_stitching2413d.lib
+opencv_superres2413d.lib
+opencv_ts2413d.lib
+opencv_video2413d.lib
+opencv_videostab2413d.lib
+
+Now, you are ready to code as follows:
+copy image to same folder
+
+Thanks for watching this video tutorials
